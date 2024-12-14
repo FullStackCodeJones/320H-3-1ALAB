@@ -1,9 +1,9 @@
-import Rect from "react";
-import Score from ".Score";
+import React from "react";
+import Score from "./Score";
 
 const Learner = ({ learner }) => {
   return (
-    <div style={{ border: "1px solid #ccc", margin: "10px", padding: "10px" }}>
+    <div className="learner-card">
       <h2>{learner.name}</h2>
       <p>{learner.bio}</p>
       <h3>Scores:</h3>

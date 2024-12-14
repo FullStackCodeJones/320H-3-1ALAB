@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Learner from "./components/Learner";
+import "./App.css";
 
 const App = () => {
   const [learnerData] = useState({

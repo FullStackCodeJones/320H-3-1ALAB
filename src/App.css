@@ -1,42 +1,90 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* General Styles */
+body {
+  background: url("https://www.transparenttextures.com/patterns/black-mesh.png"); /* Black mesh background */
+  background-color: #000; /* Fallback black */
+  font-family: "Arial", sans-serif;
+  color: #fff; /* White default text color */
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+/* Learner Card Container */
+.learner-card {
+  border: 2px solid #4caf50; /* Green border */
+  margin: 20px auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.8); /* Semi-transparent black */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  animation: float 3s ease-in-out infinite; /* Floating effect */
+}
+
+/* Title with Gradient Text */
+.learner-card h2 {
+  font-size: 2em;
+  margin: 0 0 10px;
+  background: linear-gradient(
+    90deg,
+    #4caf50,
+    #00e676,
+    #1de9b6,
+    #4caf50
+  ); /* Green gradient */
+  -webkit-background-clip: text;
+  color: transparent; /* Hides text itself */
+  animation: gradientMove 5s infinite linear;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Bio Section */
+.learner-card p {
+  font-size: 1.2em;
+  font-style: italic;
+  color: #dcdcdc; /* Light gray */
+  margin: 10px 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Scores Section */
+.learner-card h3 {
+  color: #4caf50; /* Green */
+  margin: 15px 0 5px;
+}
+
+.learner-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.learner-card ul li {
+  background: rgba(76, 175, 80, 0.2); /* Light green with transparency */
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-10px);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Gradient Animation */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  100% {
+    background-position: 100% 50%;
+  }
 }
